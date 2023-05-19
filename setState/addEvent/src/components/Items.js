@@ -2,7 +2,7 @@ import Component from "../core/Component.js";
 
 export default class Items extends Component {
   setup() {
-    this.state = { items: ['item1', 'item2'] };
+    this.state = { items: ['item1', 'item2', 'item3'] };
   }
   template() {
     const { items } = this.state;
