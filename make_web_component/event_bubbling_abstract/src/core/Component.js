@@ -5,12 +5,12 @@ export default class Component {
     this.$target = $target;
     this.setup();
     this.render();
+    this.setEvent();
   }
   setup() { };
   template() { return ''; }
   render() {
     this.$target.innerHTML = this.template();
-    this.setEvent();
   }
   setEvent() { }
   setState(newState) {
@@ -18,5 +18,10 @@ export default class Component {
     this.render();
   }
   addEvent(eventType, selector, callback) {
+    const children = [...this.$target.querySelectorAll(selector)];
+    this.$target.addEventListener(eventType, event => {
+      if (!event.target.closest(selector)) return false;
+      callback(event);
+    })
   }
 }
