@@ -1,6 +1,6 @@
 # useState
 
-## useState
+## useState란?
 
 - state : 컴포넌트가 가질 수 있는 상태
 - 렌더링이 일어나는 조건 중 하나
@@ -10,7 +10,7 @@
   3.  부모 컴포넌트가 렌더링되었을 때
   4.  forceUpdate()가 실행되었을 때
 
-- 예시 코드
+- useState 사용 예시 코드
 
 ```jsx
 import { useState } from "react";
@@ -88,10 +88,10 @@ export default App;
 1. document.querySelector를 이용하여 $app에 넣음 => DOM을 조작하기 위함
 2. render함수
 
-- state를 items로 복사함 (비구조화 할당, 불변성을 위함)
-- $app의 innerHTML을 변경 : items의 각 요소를 li태그로 감싸서 ul태그에 넣음
-- append버튼을 추가하고, 클릭시 setState함수를 실행
-- 처음에는 \<div id='app'> 요소 하나였지만, 그 안에 \<ul>과 \<button>이 추가됨
+   - state를 items로 복사함 (비구조화 할당, 불변성을 위함)
+   - $app의 innerHTML을 변경 : items의 각 요소를 li태그로 감싸서 ul태그에 넣음
+   - append버튼을 추가하고, 클릭시 setState함수를 실행
+   - 처음에는 \<div id='app'> 요소 하나였지만, 그 안에 \<ul>과 \<button>이 추가됨
 
 3. setState함수 : state를 새로운 state로 변경하고, render함수를 실행
 
